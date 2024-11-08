@@ -1,0 +1,8 @@
+{% extends "apps/master.html" %} {% load static%} {% block add%}
+<h2>Thêm sân tennis mới</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Thêm Sân Tennis</button>
+</form>
+{% endblock add%}
